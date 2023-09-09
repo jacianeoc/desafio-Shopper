@@ -1,0 +1,37 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start-container": "node lib/seed & node bin/www",
+    "dev": "nodemon bin/www",
+    "seed": "node lib/seed",
+    "test": "mocha --reporter spec test/ --exit",
+    "lint": "npx eslint server/**/*.js server/*.js lib/*.js app.js",
+    "coverage": "nyc mocha --exit --reporter progress ./test/ --timeout 50000",
+    "coverage:report": "nyc report --reporter=lcov --reporter=text",
+    "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov"
+  },
+  "dependencies": {
+    "@json2csv/node": "^6.1.2",
+    "@json2csv/plainjs": "^6.1.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-validator": "^6.15.0",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "eslint": "^8.36.0",
+    "mocha": "^10.2.0",
+    "nodemon": "^2.0.22",
+    "nyc": "^15.1.0",
+    "sinon": "^15.0.3",
+    "supertest": "^6.3.3"
+  },
+  "author": "",
+  "license": "ISC"
+}
