@@ -1,7 +1,4 @@
-## Carrinho de Compras
-Projeto simulando um carrinho de compras.
 
----
 ### Ações necessárias para rodar o backend:
 * Entrar no diretório `backend`.
 * Instalar as dependências:
@@ -9,7 +6,7 @@ Projeto simulando um carrinho de compras.
 
 * Antes de fazer o seed é necessário criar o banco de dados no postgres com o nome `carrinhodecompras`, ou nome do banco
   que preferir dentro do postegres:
-  >  CREATE DATABASE carrinhodecompras ;
+  >  CREATE DATABASE product ;
 
 * Este projeto faz as configurações de ambiente, baseadas nas ideias do [`12factor app`](https://12factor.net/pt_br/).
   Criar um arquivo na raiz do projeto com o nome `.env` e colocar o conteúdo do arquivo env-sample e preencher os valores de dados para o seu ambiente, em geral os valores sensíveis estão em branco e você deve preencher de acordo com o seu ambiente.
