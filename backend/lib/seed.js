@@ -6,11 +6,11 @@ const sqlFilePath = fs.readFileSync(__dirname + '/../mysql/database.sql').toStri
 const sqlQueries = sqlFilePath.split(";");
 
 const connection = mysql.createConnection({
-    host: 'localhost',
-    port: '3306',
-    user: 'root',
-    password: 'password',
-    database: 'product'
+    host:  'localhost',
+    port: process.env.MYSQLPORT,
+    user: process.env.MSQLUSER,
+    password: process.env.MYSQLPASSWORD,
+    database: process.env.MYSQLDATABASE
 });
 
 sqlQueries.forEach(query => {
